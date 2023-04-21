@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Schedule</title>
+        <link rel="stylesheet" href="schedule_acc.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="home.html" class="logo">Schedule</a>
+            <ul>
+              <li><a href="home.html" class="active">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="error.html">My Schedule</a></li>
+              <li><a href="schedule_acc.html">Schedule</a></li>
+              <li><a href="#" id="acc"></a></li>
+            </ul>
+          </header>
+        <div id="block1">
+            <div id="company_name">
+                <h2>Company name</h2>
+            </div>
+            <input type="text" value="Find a employee" id="find"><br>
+            <select name="" id="select">
+                <option>Directorate</option>
+                <option>Sales department</option>
+                <option>Department of Marketing and Advertising</option>
+                <option>Warehouse</option>
+                <option>Accounting</option>
+                <option>Human Resource department</option>
+                <option>IT department</option>
+            </select>
+        </div>
+        <div id="gif">
+            <img src="xw.gif" alt="" id="squi">
+        </div>
+        <div id="block2">
+            <h3>Directorate</h3>
+        <table>
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr>
+                <td>10:00 - 16:00</td>
+                <td>11:00 - 15:00</td>
+                <td>9:00 - 11:00</td>
+                <td>12:00 - 17:00</td>
+                <td>11:00 - 16:00</td>
+                <td>14:00 - 18:00</td>
+                <td>Weekend</td>
+            </tr>
+            <tr>
+                <td><a href="">List of workers on this day</a></td>
+                <td><a href="">List of workers on this day</a></td>
+                <td><a href="">List of workers on this day</a></td>
+                <td><a href="">List of workers on this day</a></td>
+                <td><a href="">List of workers on this day</a></td>
+                <td><a href="">List of workers on this day</a></td>
+                <td><a href="">List of workers on this day</a></td>
+            </tr>
+        </table>
+        </div>
+        <div id="block3">
+            <h4>List of workers in this department</h4>
+            <table>
+                <tr>
+                    <td><img src="Director.jpg" alt=""></td>
+                    <td><b>John Snowly</b> <br> Director</td>
+                    <td><a href="">Schedule</a></td>
+                </tr>
+                <tr>
+                    <td><img src="Deputy of Director.jpg" alt=""></td>
+                    <td><b>Mark Neshwille</b> <br> Director</td>
+                    <td><a href="">Schedule</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="footer">
+            <footer>
+           <div class="col leftcol_f">
+               <img class="logo" src="2.png">
+           </div>
+           
+           <div class="col centercol_f">
+            <h4>Almaty</h4>
+            <div class="address">
+            ​Manasa, 34/1<br>
+            Almaty, 050063<br>
+            Kazakhstan Republic<br>
+            +7 (727) 330 85 60<br>
+            <a href="mailto:info@iitu.edu.kz" target="_top">Contact</a>
+           </div>
+           </div>
+           
+           <div class="col rightcol_f">
+           <h4>Nur-Sultan</h4>
+           <div class="address">
+           st. Moshe-Levy 11, business center "UMI"<br>
+           Israel, Rishon LeZion 94142<br>
+           Israel<br>
+           +972 (77) 556-57-90<br>
+           <a href="mailto:info@israclinic.com" target="_top">Contact</a>
+           </div></div></footer>
+           </div>
+    </body>
+    <script>
+        let accname = JSON.parse(localStorage.getItem("active")) || [];
+        if(!(accname instanceof Array)){
+                    accname = [accname];
+                }
+        let i = accname.length;
+        console.log(accname);
+        document.getElementById("acc").innerHTML = accname[i-1];
+    </script>
+</html>

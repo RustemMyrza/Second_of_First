@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="About_acc.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+	<title>About</title>
+</head>
+<body>
+<div id="header">
+  <h1><a href="home.html" class="logo">Schedule</a></h1>
+</div>
+<div id="panel">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="myschedule.html">My Schedule</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="#" id="acc"></a>
+</div>
+
+<div id="guide">
+  <div id="guide_btn"><center><h2>Your time matters.</h2></center> 
+   <center><h3>Every day, we do our best to help you spend it productively.</h3></center>
+   <center><p>In TimeCamp, we believe that time is the most valuable resource, so wasting it would be a shame. That’s why, instead of fancy talking, we just do what we meant to do. And we do it together!</p></center>
+</div></div>    
+</body>
+<script>
+    let accname = JSON.parse(localStorage.getItem("active")) || [];
+    if(!(accname instanceof Array)){
+                accname = [accname];
+            }
+    let i = accname.length;
+    console.log(accname);
+    document.getElementById("acc").innerHTML = accname[i-1];
+</script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+  <link rel="stylesheet" type="text/css" href="Home_acc.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+      <a href="home.html" class="logo">Schedule</a>
+      <ul>
+        <li><a href="Home_acc.html" class="active">Home</a></li>
+        <li><a href="About_acc.html">About</a></li>
+        <li><a href="myschedule.html">My Schedule</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="#" id="acc"></a></li>
+      </ul>
+    </header>
+
+<!-------------------------------------------------------------------------------------------------------------------->
+<div id="guide">
+    <div id="guide_btn">
+      
+    </div>
+
+<div class="guide_text">
+
+<div class="block left">
+    <div class="text_block" id="g1">
+     <h2>Why is it important to make schedules of the day?</h2>
+     <br>
+  <p>Planning a daily routine and following it makes a person disciplined, develops organization and purposefulness. As a result, a mode of life is also developed, in which time and energy costs for non-essential things are minimized.</p>
+    </div>
+  </div>
+  <div class="block right" >
+    <div class="text_block"b id="g2">
+    <h2>What is the daily routine?</h2>
+    <br>
+  <p>The daily routine is a well-thought-out schedule of actions for the day, time planning for the purpose of its rational and most effective distribution.</p>
+    </div>
+  </div>
+  <div class="block left" >
+    <div class="text_block" id="g3">
+      <h2>How did famous scientists, composers and other bright heads spend their normal working day?</h2>
+      <br>
+  <p>Kafka is one of the 161 inspiring heroes of the book "Genius Mode" by Mason Curry - bright minds, writers and writers, painters and scientists who maneuver in the daily routine and find their rhythm of life to do what they love. Someone falls asleep early, someone works at night, others prefer long walks or reinforce their energy with coffee and a donut.</p>
+    </div>
+  </div>
+ 
+  </div>
+</div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------->
+<div id="footer">
+ <footer><blockquote>&ldquo;Time passes quickly, my strength is limited, the office is a horror, the apartment is always noisy. And if you can't just live like a human being, then you need to learn to maneuver&rdquo;<br>&sim;Franz Kafka
+ </blockquote>
+<div class="col leftcol_f">
+	<img class="logo" src="2.png">
+</div>
+
+<div class="col centercol_f">
+ <h4>Almaty</h4>
+ <div class="address">
+ ​Manasa, 34/1<br>
+ Almaty, 050063<br>
+ Kazakhstan Republic<br>
+ +7 (727) 330 85 60<br>
+ <a href="mailto:info@iitu.edu.kz" target="_top">Contact</a>
+</div>
+</div>
+
+<div class="col rightcol_f">
+<h4>Nur-Sultan</h4>
+<div class="address">
+st. Moshe-Levy 11, business center "UMI"<br>
+Israel, Rishon LeZion 94142<br>
+Israel<br>
++972 (77) 556-57-90<br>
+<a href="mailto:info@israclinic.com" target="_top">Contact</a>
+</div></div></footer>
+</div>
+</body>
+<script>
+    let accname = JSON.parse(localStorage.getItem("active")) || [];
+    if(!(accname instanceof Array)){
+                accname = [accname];
+            }
+    let i = accname.length;
+    console.log(accname);
+    document.getElementById("acc").innerHTML = accname[i-1];
+</script>
+</html>

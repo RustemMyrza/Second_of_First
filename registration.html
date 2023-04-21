@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="registration_style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+   </head>
+   <body>
+    <header>
+        <a href="home.html" class="logo">Schedule</a>
+        <ul>
+          <li><a href="Home.html" class="active">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="error.html">My Schedule</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="login.html">Log-in</a></li>
+        </ul>
+      </header>
+      <div id="form">
+          <h3>Registration</h3>
+          <br>
+          <form action="#" id="form_reg" method="POST" onsubmit="return false" action="/users/create">
+                <div><p id="outlogin" class="res"></p></div>
+                <label for="login">Login</label>
+                <input type="text" id="login" placeholder="Enter your login" name="login"><br>
+
+                <div><p id="outfirstname" class="res"></p></div>
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" id="firstname" name="firstname" placeholder="Enter your First name">
+
+                <p id="outsurname" class="res"></p>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname" placeholder="Enter your Surname" name="surname">
+
+                <p id="outgender" class="res"></p>
+                <label for="Gender">Gender</label>
+                <input type="radio" name="gender" id="gendermale" value="Male" checked>
+                <label for="gendermale">Male</label>
+                <input type="radio" name="gender" id="genderfemale" value="Female">
+                <label for="genderfemale">Female</label>
+
+                <p id="outbirth" class="res"></p>
+                <label for="birthday">Date of Birth</label>
+
+                <input type="date" id="birthday" name="birthday"min="1872-04-11" max="2016-04-11" value="2016-04-11"><br>
+
+                <p id="outemail" class="res"></p>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Enter your email" name="email">
+
+                <p id="outpassword" class="res"></p>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" name="password"><br>
+
+                <p id="outconfpassword" class="res"></p>
+                <label for="confirmpassword">Confirm your password</label>
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm your password"><br>
+
+                <input type="submit" name="submit" id="submit" value="Sign-up">
+                <input type="reset" name="reset" id="reset" value="Clear">
+          </form>
+      </div>
+   </body>
+   <script src="registration_script.js"></script>
+</html>
